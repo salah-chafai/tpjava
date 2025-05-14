@@ -12,9 +12,9 @@ public class DockStation {
         this.x = x;
         this.y = y;
         try {
-            sprite = ImageIO.read(new File("resources/dockstation.png"));
+            sprite = ImageIO.read(new File("robots/resources/dockstation.png"));
         } catch (IOException e) {
-            System.err.println("Impossible de charger l'image de la station d'accueil: resources/dockstation.png");
+            System.err.println("Impossible de charger l'image de la station d'accueil: robots/resources/dockstation.png");
         }
     }
     

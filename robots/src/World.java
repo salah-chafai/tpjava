@@ -14,8 +14,8 @@ public class World {
     private Simulator simulator;
     private List<Trash> trashList;
     private static final List<String> TRASH_SPRITE_PATHS = Arrays.asList(
-            "./resources/trash_1.png", 
-            "./resources/trash_2.png"
+            "robots/resources/trash_1.png",
+            "robots/resources/trash_2.png"
     );
     private List<ImageIcon> backgroundFrames;
     private WorldPanel worldPanel;
@@ -97,9 +97,9 @@ public class World {
     private void chargerFramesArrierePlan() {
         for (int i = 0; i <= 16; i++) {
             try {
-                backgroundFrames.add(new ImageIcon("resources/env_" + i + ".png"));
+                backgroundFrames.add(new ImageIcon("robots/resources/env_" + i + ".png"));
             } catch (Exception e) {
-                System.err.println("Impossible de charger l'image de fond: resources/env_" + i + ".png");
+                System.err.println("Impossible de charger l'image de fond: robots/resources/env_" + i + ".png");
             }
         }
     }
@@ -107,7 +107,7 @@ public class World {
     private void initialiserRobot() {
         try {
             Point initialPosition = new Point(width / 2 + 12, height / 2 + 5);
-            robot = new RobotTrash("R1", initialPosition, "resources/robot_1.png", this);
+            robot = new RobotTrash("R1", initialPosition, "robots/resources/robot_1.png", this);
         } catch (IOException | RobotException e) {
             throw new RuntimeException("Échec de l'initialisation du robot", e);
         }

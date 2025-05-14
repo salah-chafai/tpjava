@@ -12,7 +12,7 @@ public class TrashCenter {
         this.x = x;
         this.y = y;
         try {
-            sprite = ImageIO.read(new File("resources/truck.png"));
+            sprite = ImageIO.read(new File("robots/resources/truck.png"));
         } catch (IOException e) {
             System.err.println("Impossible de charger l'image de la station de déchets: resources/truck.png");
         }
